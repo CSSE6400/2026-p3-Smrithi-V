@@ -8,7 +8,6 @@ def create_app(config_overrides=None):
    app.config['SQLALCHEMY_DATABASE_URI'] = environ.get("SQLALCHEMY_DATABASE_URI", "sqlite:///db.sqlite")
    if config_overrides: 
        app.config.update(config_overrides)
- 
    # Load the models 
    from todo.models import db 
    from todo.models.todo import Todo 
